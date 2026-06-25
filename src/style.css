@@ -1,0 +1,97 @@
+:root {
+  background: #000;
+  color: #eaf7ff;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html, body, #app { width: 100%; height: 100%; margin: 0; overflow: hidden; }
+
+canvas { display: block; width: 100%; height: 100%; }
+
+.enter-panel {
+  position: fixed;
+  z-index: 2;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background:
+    radial-gradient(circle at 50% 50%, rgba(3, 5, 13, .18), transparent 38%),
+    rgba(3, 5, 13, .14);
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 550ms ease, visibility 550ms step-end;
+}
+
+.enter-panel.is-leaving {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 550ms ease, visibility 550ms step-start;
+}
+
+.enter-panel__card {
+  width: min(100%, 720px);
+  padding: 24px;
+  text-align: center;
+}
+
+.enter-panel h1 {
+  margin: 0;
+  color: transparent;
+  font-family: "Arial Rounded MT Bold", "Avenir Next Rounded", "Trebuchet MS", Verdana, sans-serif;
+  font-size: clamp(58px, 10vw, 132px);
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: .83;
+  opacity: 0;
+  pointer-events: none;
+  text-shadow: none;
+  transform: none;
+}
+
+.opening-title-label span {
+  display: block;
+}
+
+.enter-panel__button {
+  margin-top: 28px;
+  padding: 11px 18px;
+  color: #dff8ff;
+  font: inherit;
+  font-size: clamp(16px, 2.2vw, 21px);
+  font-weight: 500;
+  letter-spacing: 0;
+  border: 1px solid rgba(154, 231, 255, .58);
+  border-radius: 2px;
+  background: rgba(4, 13, 31, .32);
+  box-shadow: 0 0 24px rgba(115, 219, 255, .16);
+  cursor: pointer;
+  transition: transform 160ms ease, color 160ms ease, background 160ms ease, box-shadow 160ms ease;
+}
+
+.enter-panel__button:hover:not(:disabled),
+.enter-panel__button:focus-visible:not(:disabled) {
+  color: #fff;
+  background: rgba(154, 231, 255, .14);
+  box-shadow: 0 0 34px rgba(115, 219, 255, .38);
+  outline: none;
+  transform: translateY(-2px);
+}
+
+.enter-panel__button:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 4px;
+}
+
+.enter-panel__button:disabled {
+  cursor: wait;
+  opacity: .7;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .enter-panel,
+  .enter-panel__button { transition: none; }
+}

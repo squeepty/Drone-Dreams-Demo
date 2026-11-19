@@ -2,6 +2,8 @@
 
 Drone Dreams is a Three.js drone-light show demo. It renders 9,600 procedural drones on a 120x80 lattice.
 
+Live here: 🔥 https://squeepty.github.io/Drone-Dreams-Demo/ 🔥
+
 ## Playback
 
 The demo contains 14 runtime scenes 

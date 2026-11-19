@@ -1,11 +1,10 @@
 # Drone Dreams
 
-Drone Dreams is a finished Vite + Three.js drone-light show demo. It renders 9,600 procedural drones on a 120x80 lattice and plays them in sync with the included `Station13_Remix_Squeepty.mp3` soundtrack.
+Drone Dreams is a Three.js drone-light show demo. It renders 9,600 procedural drones on a 120x80 lattice.
 
 ## Playback
 
-The demo contains 14 runtime scenes covering 15 musical beats. The `Drone Dreams` title scene spans beats 11 and 12.
-
+The demo contains 14 runtime scenes 
 1. Helix Bloom
 2. Stars and Stripes
 3. Spiral Strands
@@ -29,7 +28,7 @@ npm install
 npm run dev
 ```
 
-Open the local Vite URL, then click to enter so the browser can start audio playback. Add `?scene=2` to the URL to preview a specific runtime scene.
+Open the local Vite URL, then click to enter so the browser can start audio playback.
 
 ## Build
 
@@ -38,7 +37,7 @@ npm run build
 npm run preview
 ```
 
-The production build writes to `dist/`, which is intentionally ignored by Git.
+The production build writes to `dist/`.
 
 ## Source Layout
 
